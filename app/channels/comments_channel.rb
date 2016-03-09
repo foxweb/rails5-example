@@ -9,6 +9,6 @@ class CommentsChannel < ApplicationCable::Channel
   end
 
   def comment(data)
-    Comment.create data['message']
+    Comment.create data['message'].merge(user: current_user)
   end
 end
