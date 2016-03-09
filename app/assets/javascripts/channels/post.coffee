@@ -25,7 +25,7 @@ App.comments = App.cable.subscriptions.create "CommentsChannel",
   installPageChangeCallback: ->
     unless @installedPageChangeCallback
       @installedPageChangeCallback = true
-      $(document).ready -> App.comments.followCurrentMessage()
+      $(document).on 'page:change', -> App.comments.followCurrentMessage()
 
   userIsCurrentUser: (comment) ->
     $(comment).attr('data-user-id') is $('meta[name=current-user]').attr('id')

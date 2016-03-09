@@ -9,7 +9,7 @@
 <h3>Comments</h3>
 
 <ul id="comments" data-channel="comments" data-post-id="<%= @post.id %>">
-  <%= render @post.comments %>
+  <%= render @post.comments.order(:created_at) %>
 </ul>
 
 <form>
