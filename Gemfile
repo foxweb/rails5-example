@@ -10,10 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
-gem 'jquery-turbolinks'
-# gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
