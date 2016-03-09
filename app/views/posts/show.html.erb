@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @post.title %></h1>
+
+<p><em><%= @post.subtitle %></em></p>
+<p><%= @post.body %></p>
+<p><%= @post.user.full_name %>, <%= @post.published_at.strftime('%d.%m.%Y') %></p>
+
+<h3>Comments</h3>
+
+<ul id="comments" data-channel="comments" data-post-id="<%= @post.id %>">
+  <%= render @post.comments %>
+</ul>
+
+<form>
+  <label>Say something</label>
+  <input type="text" id="comment_content" data-behavior="post_comment">
+</form>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
